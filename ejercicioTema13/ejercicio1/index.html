@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.js"></script>
+    <title>Document</title>
+    <style>
+        .activa {
+            width: 1024px;
+            height: 768px;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <div class="activa">
+
+    </div>
+
+    <script>
+
+        $( ".activa" ).mouseover(function() {
+            $(".activa").css('background-color', 'white');
+            
+        });
+        $(".activa").mouseleave(function(){
+            let randomColor = "#"+((1<<24)*Math.random()|0).toString(16); 
+            $(".activa").css("background-color", randomColor);
+        });
+        
+    </script>
+</body>
+</html>
