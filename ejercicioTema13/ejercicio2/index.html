@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <script src="jquery.js"></script>
+    <title>Titulo Ejercicio 2</title>
+</head>
+<body>
+
+    <div>
+        <label>Copia las coordenadas correctas de Cádiz</label>
+    </div>
+    <div>
+        <p nombre="Barcelona">41° 1' 0.812" N 2° 28' 0.814" W </p>
+        <p nombre="Cádiz">36° 53' 0.812" N 5° 58' 0.814" W </p> 
+        <p nombre="Valencia">39° 56' 0.812" N 0° 0' 0.814" W </p>
+    </div>
+
+    <script>
+        $('p').each(function() {
+            this.oncopy = function() {
+                if (this.getAttribute("nombre") === "Cádiz") {
+                    alert("¡Correcto!");
+                } else {
+                    alert("Prueba de nuevo");
+                }
+            }
+        })
+    </script>
+</body>
+</html>
